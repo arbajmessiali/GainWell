@@ -5,13 +5,25 @@
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/gainwell_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/gainwell_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GainWell"
-        tools:targetApi="31" />
+        tools:targetApi="22">
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false" />
+        <activity android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
