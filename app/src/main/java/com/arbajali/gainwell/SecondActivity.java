@@ -25,7 +25,8 @@ public class SecondActivity extends AppCompatActivity {
                 return true;
             }
         });
-
+        webview.getSettings().setUseWideViewPort(true);
+        webview.getSettings().setLoadWithOverviewMode(true);
         this.setContentView(webview);
     }
 
